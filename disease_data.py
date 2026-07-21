@@ -1,0 +1,461 @@
+"""
+General, educational information about each disease the model can predict.
+This is NOT medical advice — always consult a licensed healthcare professional
+for diagnosis and treatment. Content is intentionally general (lifestyle,
+hygiene, and when-to-seek-care guidance only) rather than dosing or treatment
+protocols.
+"""
+
+DISEASE_INFO = {
+    "(vertigo) Paroymsal  Positional Vertigo": {
+        "category": "Neurological",
+        "overview": "A common inner-ear condition causing brief, intense spinning sensations triggered by specific head movements.",
+        "precautions": [
+            "Sit or lie down immediately when dizziness starts",
+            "Move slowly when changing head position (e.g. getting out of bed)",
+            "Avoid driving or climbing during an active episode",
+            "Ask a doctor about repositioning exercises (e.g. Epley maneuver)",
+        ],
+        "see_doctor_if": "episodes are frequent, you have hearing loss, or vertigo follows a head injury.",
+    },
+    "AIDS": {
+        "category": "Immune / Infectious",
+        "overview": "The advanced stage of HIV infection, marked by severe damage to the immune system.",
+        "precautions": [
+            "Follow antiretroviral therapy exactly as prescribed",
+            "Attend regular checkups to monitor immune function",
+            "Practice safe sex and avoid sharing needles",
+            "Maintain good nutrition and avoid infections where possible",
+        ],
+        "see_doctor_if": "you experience unexplained weight loss, recurring infections, or persistent fever.",
+    },
+    "Acne": {
+        "category": "Dermatological",
+        "overview": "A skin condition where hair follicles become clogged with oil and dead skin, causing pimples.",
+        "precautions": [
+            "Wash the affected area twice daily with a gentle cleanser",
+            "Avoid picking or squeezing pimples",
+            "Use non-comedogenic (oil-free) skincare and makeup products",
+            "Change pillowcases and avoid touching your face often",
+        ],
+        "see_doctor_if": "acne is severe, scarring, or not improving with over-the-counter products.",
+    },
+    "Alcoholic hepatitis": {
+        "category": "Liver",
+        "overview": "Liver inflammation caused by heavy, prolonged alcohol consumption.",
+        "precautions": [
+            "Stop drinking alcohol completely",
+            "Eat a nutritious, balanced diet",
+            "Attend follow-up liver function tests",
+            "Seek support for alcohol dependence if needed",
+        ],
+        "see_doctor_if": "you notice yellowing skin/eyes, abdominal swelling, or confusion.",
+    },
+    "Allergy": {
+        "category": "Immune",
+        "overview": "An overreaction of the immune system to a normally harmless substance (pollen, food, dust, etc.).",
+        "precautions": [
+            "Identify and avoid known triggers where possible",
+            "Keep antihistamines on hand if prescribed",
+            "Keep living spaces clean and well-ventilated",
+            "Carry emergency medication if you have severe allergies",
+        ],
+        "see_doctor_if": "you experience difficulty breathing, swelling of the face/throat, or widespread hives.",
+    },
+    "Arthritis": {
+        "category": "Musculoskeletal",
+        "overview": "Inflammation of one or more joints, causing pain and stiffness that can worsen with age.",
+        "precautions": [
+            "Stay physically active with low-impact exercise",
+            "Maintain a healthy weight to reduce joint stress",
+            "Use hot/cold packs to ease pain and stiffness",
+            "Protect joints during repetitive or heavy tasks",
+        ],
+        "see_doctor_if": "joint pain, swelling, or stiffness persists beyond a few days or limits daily activity.",
+    },
+    "Bronchial Asthma": {
+        "category": "Respiratory",
+        "overview": "A chronic condition where the airways narrow and swell, making breathing difficult.",
+        "precautions": [
+            "Keep a rescue inhaler accessible at all times",
+            "Identify and avoid personal asthma triggers (smoke, dust, cold air)",
+            "Follow your prescribed controller medication routine",
+            "Get an annual flu vaccination if advised by your doctor",
+        ],
+        "see_doctor_if": "you have frequent attacks, or your inhaler isn't relieving symptoms.",
+    },
+    "Cervical spondylosis": {
+        "category": "Musculoskeletal",
+        "overview": "Age-related wear affecting the disks and joints in the neck, causing stiffness and pain.",
+        "precautions": [
+            "Maintain good posture, especially at desks and screens",
+            "Do gentle neck stretching and strengthening exercises",
+            "Use an ergonomic pillow while sleeping",
+            "Take frequent breaks from prolonged screen or phone use",
+        ],
+        "see_doctor_if": "you develop numbness, tingling, or weakness in the arms or hands.",
+    },
+    "Chicken pox": {
+        "category": "Infectious",
+        "overview": "A highly contagious viral infection causing an itchy, blister-like rash and fever.",
+        "precautions": [
+            "Stay isolated until all blisters have crusted over",
+            "Avoid scratching to prevent scarring and infection",
+            "Trim fingernails short and keep skin clean",
+            "Rest and stay well-hydrated",
+        ],
+        "see_doctor_if": "fever is very high, the rash spreads to the eyes, or breathing becomes difficult.",
+    },
+    "Chronic cholestasis": {
+        "category": "Liver",
+        "overview": "A condition where bile flow from the liver is reduced or blocked, causing itching and jaundice.",
+        "precautions": [
+            "Follow the prescribed treatment plan closely",
+            "Avoid alcohol and unnecessary medications that stress the liver",
+            "Use moisturizers and prescribed treatments to ease itching",
+            "Attend regular liver function monitoring",
+        ],
+        "see_doctor_if": "you notice yellowing skin, dark urine, or worsening itching.",
+    },
+    "Common Cold": {
+        "category": "Respiratory",
+        "overview": "A mild viral infection of the nose and throat, one of the most frequent illnesses.",
+        "precautions": [
+            "Rest and stay well-hydrated",
+            "Use saline nasal sprays or steam inhalation for congestion",
+            "Wash hands frequently to avoid spreading it",
+            "Avoid close contact with others while symptomatic",
+        ],
+        "see_doctor_if": "symptoms last more than 10 days or you develop a high fever or chest pain.",
+    },
+    "Dengue": {
+        "category": "Infectious (mosquito-borne)",
+        "overview": "A viral infection spread by mosquitoes, causing high fever, rash, and severe joint/muscle pain.",
+        "precautions": [
+            "Rest and drink plenty of fluids",
+            "Use paracetamol for fever (avoid aspirin/ibuprofen)",
+            "Use mosquito repellents and nets to prevent spread",
+            "Monitor for warning signs like bleeding or severe abdominal pain",
+        ],
+        "see_doctor_if": "you notice bleeding, persistent vomiting, or severe abdominal pain.",
+    },
+    "Diabetes ": {
+        "category": "Metabolic",
+        "overview": "A chronic condition where the body cannot properly regulate blood sugar levels.",
+        "precautions": [
+            "Monitor blood sugar levels regularly",
+            "Follow a balanced diet low in refined sugar",
+            "Exercise regularly as advised by your doctor",
+            "Take medications/insulin exactly as prescribed",
+        ],
+        "see_doctor_if": "you experience extreme thirst, frequent urination, or unexplained fatigue.",
+    },
+    "Dimorphic hemmorhoids(piles)": {
+        "category": "Gastrointestinal",
+        "overview": "Swollen veins in the lower rectum or anus, causing discomfort and bleeding.",
+        "precautions": [
+            "Eat a high-fiber diet to soften stools",
+            "Stay well-hydrated",
+            "Avoid straining or prolonged sitting on the toilet",
+            "Use warm sitz baths to ease discomfort",
+        ],
+        "see_doctor_if": "you notice persistent bleeding or the pain becomes severe.",
+    },
+    "Drug Reaction": {
+        "category": "Immune",
+        "overview": "An adverse reaction of the body to a medication, ranging from mild rash to severe reactions.",
+        "precautions": [
+            "Stop the suspected medication and inform your doctor immediately",
+            "Keep a record of all medications and known drug allergies",
+            "Avoid self-medicating without medical guidance",
+            "Carry an allergy alert card/bracelet if reactions are severe",
+        ],
+        "see_doctor_if": "you develop swelling, difficulty breathing, or widespread skin blistering.",
+    },
+    "Fungal infection": {
+        "category": "Dermatological",
+        "overview": "An infection caused by fungi, commonly affecting skin, nails, or moist body areas.",
+        "precautions": [
+            "Keep the affected area clean and dry",
+            "Avoid sharing towels, clothing, or footwear",
+            "Wear breathable fabrics and change out of sweaty clothes promptly",
+            "Use antifungal treatment as directed for the full course",
+        ],
+        "see_doctor_if": "the infection spreads, recurs, or doesn't improve with basic care.",
+    },
+    "GERD": {
+        "category": "Gastrointestinal",
+        "overview": "Gastroesophageal reflux disease — stomach acid frequently flows back into the esophagus, causing heartburn.",
+        "precautions": [
+            "Avoid large meals, especially close to bedtime",
+            "Limit spicy, fatty, or acidic foods and caffeine",
+            "Avoid lying down right after eating",
+            "Elevate the head of your bed if nighttime symptoms occur",
+        ],
+        "see_doctor_if": "symptoms occur frequently or you have difficulty swallowing.",
+    },
+    "Gastroenteritis": {
+        "category": "Gastrointestinal",
+        "overview": "Inflammation of the stomach and intestines, usually from infection, causing diarrhea and vomiting.",
+        "precautions": [
+            "Stay hydrated with water and oral rehydration solutions",
+            "Eat bland, easy-to-digest food as tolerated",
+            "Wash hands frequently to prevent spreading infection",
+            "Rest until symptoms fully resolve",
+        ],
+        "see_doctor_if": "you notice signs of dehydration, blood in stool, or symptoms last more than a few days.",
+    },
+    "Heart attack": {
+        "category": "Cardiovascular — Emergency",
+        "overview": "A blockage of blood flow to the heart muscle. This is a medical emergency.",
+        "precautions": [
+            "Call emergency services immediately if a heart attack is suspected",
+            "Chew aspirin only if advised by emergency responders",
+            "Stay calm and avoid physical exertion while waiting for help",
+            "Follow up with cardiac rehabilitation and lifestyle changes afterward",
+        ],
+        "see_doctor_if": "you or someone else has chest pain, pain radiating to the arm/jaw, or shortness of breath — seek emergency care immediately.",
+    },
+    "Hepatitis B": {
+        "category": "Liver / Infectious",
+        "overview": "A viral infection that attacks the liver and can become chronic.",
+        "precautions": [
+            "Get vaccinated if not already immune",
+            "Avoid alcohol to reduce liver strain",
+            "Practice safe sex and avoid sharing needles",
+            "Attend regular liver function monitoring",
+        ],
+        "see_doctor_if": "you notice jaundice, fatigue, or abdominal pain.",
+    },
+    "Hepatitis C": {
+        "category": "Liver / Infectious",
+        "overview": "A viral infection spread through blood contact that can cause long-term liver damage.",
+        "precautions": [
+            "Avoid alcohol completely",
+            "Avoid sharing needles or personal items that may carry blood",
+            "Complete the full course of antiviral treatment if prescribed",
+            "Get regular liver monitoring",
+        ],
+        "see_doctor_if": "you notice jaundice, dark urine, or unexplained fatigue.",
+    },
+    "Hepatitis D": {
+        "category": "Liver / Infectious",
+        "overview": "A liver infection that only occurs in people already infected with Hepatitis B.",
+        "precautions": [
+            "Get vaccinated against Hepatitis B to prevent this",
+            "Avoid alcohol and hepatotoxic substances",
+            "Attend regular liver check-ups",
+            "Follow prescribed antiviral treatment closely",
+        ],
+        "see_doctor_if": "you notice jaundice or worsening liver-related symptoms.",
+    },
+    "Hepatitis E": {
+        "category": "Liver / Infectious",
+        "overview": "A liver infection usually spread through contaminated water.",
+        "precautions": [
+            "Drink only clean, safe water",
+            "Practice good hand hygiene, especially before eating",
+            "Rest and stay hydrated during recovery",
+            "Avoid alcohol until fully recovered",
+        ],
+        "see_doctor_if": "you're pregnant and suspect infection, or symptoms worsen.",
+    },
+    "Hypertension ": {
+        "category": "Cardiovascular",
+        "overview": "Persistently high blood pressure that increases risk of heart disease and stroke.",
+        "precautions": [
+            "Reduce salt intake and eat a balanced diet",
+            "Exercise regularly",
+            "Limit alcohol and avoid smoking",
+            "Monitor blood pressure and take medications as prescribed",
+        ],
+        "see_doctor_if": "you have severe headaches, vision changes, or blood pressure readings are very high.",
+    },
+    "Hyperthyroidism": {
+        "category": "Endocrine",
+        "overview": "Overactivity of the thyroid gland, speeding up the body's metabolism.",
+        "precautions": [
+            "Take prescribed medication consistently",
+            "Attend regular thyroid function tests",
+            "Avoid excess iodine intake unless advised otherwise",
+            "Manage stress, as it can worsen symptoms",
+        ],
+        "see_doctor_if": "you have rapid heartbeat, unexplained weight loss, or tremors.",
+    },
+    "Hypoglycemia": {
+        "category": "Metabolic",
+        "overview": "Abnormally low blood sugar, often related to diabetes management.",
+        "precautions": [
+            "Carry a fast-acting sugar source (juice, glucose tablets)",
+            "Eat regular, balanced meals and avoid skipping them",
+            "Monitor blood sugar closely if diabetic",
+            "Inform others nearby about the condition in case of emergency",
+        ],
+        "see_doctor_if": "episodes are frequent or you lose consciousness.",
+    },
+    "Hypothyroidism": {
+        "category": "Endocrine",
+        "overview": "An underactive thyroid gland that slows the body's metabolism.",
+        "precautions": [
+            "Take thyroid hormone replacement as prescribed, consistently",
+            "Attend regular thyroid function monitoring",
+            "Maintain a balanced diet and regular exercise",
+            "Report new or worsening fatigue to your doctor",
+        ],
+        "see_doctor_if": "you have unexplained weight gain, fatigue, or cold intolerance.",
+    },
+    "Impetigo": {
+        "category": "Dermatological / Infectious",
+        "overview": "A highly contagious bacterial skin infection causing red sores, common in children.",
+        "precautions": [
+            "Keep the affected area clean and covered",
+            "Avoid scratching and touching the sores",
+            "Wash hands frequently and avoid sharing towels",
+            "Complete the full course of prescribed antibiotics if given",
+        ],
+        "see_doctor_if": "sores spread rapidly or don't improve with basic hygiene care.",
+    },
+    "Jaundice": {
+        "category": "Liver",
+        "overview": "Yellowing of the skin and eyes caused by excess bilirubin, usually a sign of an underlying liver issue.",
+        "precautions": [
+            "Rest and stay well-hydrated",
+            "Avoid alcohol and unnecessary medications",
+            "Eat a light, liver-friendly diet",
+            "Identify and treat the underlying cause with a doctor",
+        ],
+        "see_doctor_if": "yellowing worsens, or you have severe abdominal pain or confusion.",
+    },
+    "Malaria": {
+        "category": "Infectious (mosquito-borne)",
+        "overview": "A parasitic infection transmitted by mosquito bites, causing cyclical fever and chills.",
+        "precautions": [
+            "Complete the full course of antimalarial medication",
+            "Use mosquito nets and repellents to prevent further bites",
+            "Rest and stay hydrated during recovery",
+            "Take preventive medication when traveling to high-risk areas",
+        ],
+        "see_doctor_if": "fever is very high, or you develop confusion or difficulty breathing.",
+    },
+    "Migraine": {
+        "category": "Neurological",
+        "overview": "A neurological condition causing intense, often one-sided headaches, sometimes with nausea and light sensitivity.",
+        "precautions": [
+            "Rest in a quiet, dark room during an attack",
+            "Identify and avoid personal triggers (certain foods, stress, poor sleep)",
+            "Stay hydrated and maintain a regular sleep schedule",
+            "Keep prescribed medication on hand for early treatment",
+        ],
+        "see_doctor_if": "headaches suddenly become the 'worst ever' or are accompanied by confusion or vision loss.",
+    },
+    "Osteoarthristis": {
+        "category": "Musculoskeletal",
+        "overview": "A degenerative joint disease causing cartilage breakdown, pain, and stiffness, common with aging.",
+        "precautions": [
+            "Maintain a healthy weight to reduce joint load",
+            "Stay active with low-impact exercise like swimming or walking",
+            "Use assistive devices if needed to protect joints",
+            "Apply heat or cold therapy for pain relief",
+        ],
+        "see_doctor_if": "joint pain significantly limits mobility or daily activities.",
+    },
+    "Paralysis (brain hemorrhage)": {
+        "category": "Neurological — Emergency",
+        "overview": "Loss of muscle function caused by bleeding in the brain. This is a medical emergency.",
+        "precautions": [
+            "Seek emergency medical care immediately",
+            "Keep the person still and avoid moving them unnecessarily",
+            "Note the time symptoms started — this affects treatment options",
+            "Follow up with rehabilitation therapy as recommended",
+        ],
+        "see_doctor_if": "you notice sudden weakness, slurred speech, or facial drooping — call emergency services immediately.",
+    },
+    "Peptic ulcer diseae": {
+        "category": "Gastrointestinal",
+        "overview": "Open sores that develop on the lining of the stomach or upper small intestine.",
+        "precautions": [
+            "Avoid NSAIDs (like ibuprofen) unless approved by a doctor",
+            "Limit alcohol, caffeine, and spicy foods",
+            "Eat smaller, more frequent meals",
+            "Complete prescribed treatment for underlying infection (e.g. H. pylori) if diagnosed",
+        ],
+        "see_doctor_if": "you notice black stools, vomiting blood, or severe abdominal pain.",
+    },
+    "Pneumonia": {
+        "category": "Respiratory",
+        "overview": "An infection that inflames the air sacs in one or both lungs, which can fill with fluid.",
+        "precautions": [
+            "Rest and stay well-hydrated",
+            "Complete the full course of prescribed antibiotics if bacterial",
+            "Use a humidifier or steam to ease breathing",
+            "Get vaccinated (flu/pneumococcal) as recommended",
+        ],
+        "see_doctor_if": "you have difficulty breathing, high fever, or bluish lips/face.",
+    },
+    "Psoriasis": {
+        "category": "Dermatological",
+        "overview": "A chronic autoimmune condition causing thick, scaly, itchy patches on the skin.",
+        "precautions": [
+            "Keep skin moisturized to reduce flare-ups",
+            "Avoid known triggers such as stress or skin injury",
+            "Get moderate sun exposure if recommended by your doctor",
+            "Follow prescribed topical or systemic treatment consistently",
+        ],
+        "see_doctor_if": "flare-ups are severe, widespread, or affect joints (possible psoriatic arthritis).",
+    },
+    "Tuberculosis": {
+        "category": "Infectious (respiratory)",
+        "overview": "A serious bacterial infection that primarily affects the lungs and spreads through the air.",
+        "precautions": [
+            "Complete the full course of prescribed antibiotics, even if you feel better",
+            "Cover your mouth when coughing and isolate during the contagious period",
+            "Ensure good ventilation in living spaces",
+            "Attend all follow-up tests to confirm treatment success",
+        ],
+        "see_doctor_if": "you have a persistent cough (3+ weeks), blood in sputum, or unexplained weight loss.",
+    },
+    "Typhoid": {
+        "category": "Infectious",
+        "overview": "A bacterial infection spread through contaminated food or water, causing sustained fever.",
+        "precautions": [
+            "Drink only clean, safe water and eat well-cooked food",
+            "Complete the full course of prescribed antibiotics",
+            "Rest and stay hydrated",
+            "Maintain strict hand hygiene to avoid spreading it",
+        ],
+        "see_doctor_if": "fever persists beyond a few days or you develop severe abdominal pain.",
+    },
+    "Urinary tract infection": {
+        "category": "Genitourinary",
+        "overview": "A bacterial infection affecting any part of the urinary system, most often the bladder.",
+        "precautions": [
+            "Drink plenty of water to help flush bacteria",
+            "Complete the full course of prescribed antibiotics",
+            "Urinate frequently and after sexual activity",
+            "Practice good hygiene",
+        ],
+        "see_doctor_if": "you notice fever, back pain, or blood in urine (possible kidney involvement).",
+    },
+    "Varicose veins": {
+        "category": "Cardiovascular",
+        "overview": "Swollen, twisted veins usually appearing in the legs due to weakened vein valves.",
+        "precautions": [
+            "Elevate legs when resting",
+            "Avoid standing or sitting for long periods without moving",
+            "Wear compression stockings if recommended",
+            "Exercise regularly to improve circulation",
+        ],
+        "see_doctor_if": "veins become painful, swollen suddenly, or skin changes color near the vein.",
+    },
+    "hepatitis A": {
+        "category": "Liver / Infectious",
+        "overview": "A highly contagious liver infection spread through contaminated food or water.",
+        "precautions": [
+            "Rest and stay hydrated during recovery",
+            "Practice strict hand hygiene, especially after using the bathroom",
+            "Avoid alcohol until fully recovered",
+            "Get vaccinated to prevent future infection",
+        ],
+        "see_doctor_if": "you notice yellowing skin/eyes or symptoms worsen.",
+    },
+}
