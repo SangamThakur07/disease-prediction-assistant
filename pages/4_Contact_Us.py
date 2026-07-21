@@ -39,7 +39,7 @@ st.markdown(
     <div class="card">
     📧 <b>Email:</b> sangamthakur2aa6@gmail.com<br>
     💻 <b>GitHub:</b> <a href="https://github.com/SangamThakur07" target="_blank">github.com/SangamThakur07</a><br>
-    🏫 <b>Institution:</b> Your College Name Here
+    🏫 <b>Institution:</b> Lovely Professional University
     </div>
     """,
     unsafe_allow_html=True,
